@@ -1,0 +1,7 @@
+# Never commit game data or saves.
+*.bin
+*.cue
+*.iso
+*.img
+*.sav
+*.state
