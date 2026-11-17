@@ -81,18 +81,60 @@ Proyecto de aficionados, sin fines de lucro, sin relación con Konami.
 
 ### Yu-Gi-Oh! Forbidden Memories for iPhone and iPad
 
-A native iOS port of **YFM Re-Decomp** (the PC version built from the game's decompilation). Not an emulator.
+A native iOS port of **YFM Re-Decomp** (the PC version built from the game's decompilation).
+It is not an emulator: the game runs as a regular iPhone app.
 
-- Modern touch controls, an iOS-style options menu, the HD graphics options, audio, video, saves and save states,
-  and the bundled mods (3D Monsters, Hand Camera, AI Hard Mode, Yamyi mods, Drop Missing Cards).
-- **Requirements:** a 64-bit iPhone or iPad on **iOS 16+**. Tested on an iPhone 12 Pro (A14), iOS 27.
-  Install with AltStore, SideStore, FlareStore, LiveContainer, etc. **No JIT needed.**
-- **You need your own disc image:** the `.bin` of Yu-Gi-Oh! Forbidden Memories, **USA (SLUS-01411)**. None is included.
+**What's included**
 
-**First launch:** open the app, tap **Choose ROM...** (it shows an error in this version — close the app),
-then in the **Files** app put your `.bin` in the app's `Documents/game` folder and open the game again.
+- Modern touch controls (D-pad, face buttons, L1/L2/R1/R2, SELECT, START and MENU), kept clear of the notch.
+- An iOS-style options menu.
+- The original project's HD graphics options (internal resolution, HD text, antialiasing, filters).
+- The game's audio, animations and video.
+- Saves and save states.
+- The mods that ship with the project: **3D Monsters**, **Hand Camera**, **AI Hard Mode**, **Yamyi mods** and **Drop Missing Cards**.
 
-Credits: [YFM Re-Decomp](https://github.com/Unchiga/Yu-Gi-Oh-Forbidden-Memories-Recompiled) (MIT),
-[memories-decomp](https://github.com/krystalgamer/memories-decomp), SDL3, FreeType, libpng, zlib.
-iOS source: [muguiwara23/port-eame-yfm](https://github.com/muguiwara23/port-eame-yfm/tree/port-eame/ios).
-Fan project, not affiliated with Konami. *Yu-Gi-Oh!* and *Forbidden Memories* belong to Konami. No game data is distributed.
+**What's NOT included**
+
+- The game. You need the `.bin` from **your own disc** of Yu-Gi-Oh! Forbidden Memories, **USA version (SLUS-01411)**.
+  It is never included or shared here.
+
+### Requirements
+
+- A 64-bit iPhone or iPad on **iOS 16 or later**.
+- Tested on an **iPhone 12 Pro (A14) running iOS 27**. Other models should work but haven't been tested yet:
+  if you try one, let us know in *Issues*.
+- A way to install IPAs: **AltStore, SideStore, FlareStore, LiveContainer** or similar.
+  **No JIT needed.**
+
+### Installation and first launch
+
+1. Download the `.ipa` from [Releases](../../releases) and install it with your store or with LiveContainer.
+2. Open the game. It will ask for the disc: tap **Choose ROM...**. It will show an error;
+   that's expected in this version. **Close the app.**
+3. Open the **Files** app and go to the app's folder.
+   - Installed with a store: **On My iPhone → YFM Re-Decomp → game**.
+   - In LiveContainer: inside LiveContainer's folder, in the app's *Documents* folder → **game**.
+4. Copy your disc's `.bin` there.
+5. Open the game again. It starts.
+
+Your saves, settings and the `port-eame-log.txt` log stay in that same folder (the *Documents* one).
+If something goes wrong, that log is what to share.
+
+### Known limitations
+
+- **Choose ROM...** doesn't open a file picker on iOS: the disc goes into the `game` folder by hand.
+- After changing the language, close the app and open it again.
+- External mods that include code (`.dylib`) have to be compiled for iOS and signed together with the app;
+  mods with only data or textures should work from the `mods` folder (being tested).
+- The app has no icon of its own.
+
+### Credits and license
+
+- **[YFM Re-Decomp](https://github.com/Unchiga/Yu-Gi-Oh-Forbidden-Memories-Recompiled)** by Unchiga and contributors:
+  the PC port all of this is built on, under the MIT license (see the license included in the app).
+- **[memories-decomp](https://github.com/krystalgamer/memories-decomp)**: the game's decompilation, by its authors.
+- **SDL3, FreeType, libpng and zlib**: their licenses ship inside the app (`licenses/`).
+- The iOS port's code: [muguiwara23/port-eame-yfm](https://github.com/muguiwara23/port-eame-yfm/tree/port-eame/ios), branch `port-eame/ios`.
+
+A non-profit fan project, not affiliated with Konami.
+*Yu-Gi-Oh!* and *Forbidden Memories* belong to Konami. No game data is distributed.
